@@ -1,0 +1,7 @@
+@import './variables';
+@import './header';
+
+.contact {
+    @include flexCenter(row, pink);
+    width: 100% - 20%;
+}
