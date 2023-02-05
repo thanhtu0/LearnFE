@@ -17,6 +17,7 @@ console.log(example)
 document.getElementById('example').innerText = example;
 */
 //3. Destructuring Objects
+/*
 const personalInformation = {
     firstName: 'Lưu Lê Thanh',
     lastName: 'Tú',
@@ -24,14 +25,11 @@ const personalInformation = {
     state: 'Thừa Thiên Huế',
     zipCode: 530000-539999
 };
-
 //const {firstName, lastName} = personalInformation;
-
 //console.log(`${firstName} ${lastName}`);
-
 const {firstName: fn, lastName: ln} = personalInformation;
-
 console.log(`${fn} ${ln}`);
+*/
 //4. Destructuring Array: tách mảng
 /*
 let [firstName, middleName, lastName] = ['Lưu', 'Lê Thanh', 'Tú',];
@@ -90,3 +88,17 @@ for (let income of incomes) {
 console.log(incomes);
 */
 //9.Spread Operator
+/*
+let example1 = [1,2,3,4,5,6];
+let example2 = [... example1]; //Chúng ta sẽ tạo ra 1 ex2 với những giá trị từ ex1
+example2.push(true); 
+
+console.log(example2);
+*/
+//10.Rest Operator
+function add(nums) {
+
+    console.log(arguments);
+}
+
+add(4, 5, 7, 8, 12)
