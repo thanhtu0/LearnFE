@@ -9,7 +9,6 @@ let num2 = 19;
 const Age = `${word2} năm nay đã ${num1 + num2} tuổi roài`;
 console.log(Age);
 */
-
 /*
 let example = 'Hello \n' + 'world';
 let example = `${word1}  ${word2}`;
@@ -96,9 +95,80 @@ example2.push(true);
 console.log(example2);
 */
 //10.Rest Operator
+/*
 function add(nums) {
 
     console.log(arguments);
 }
 
 add(4, 5, 7, 8, 12)
+function add(...nums) {
+
+    console.log(nums);
+}
+
+add(4, 5, 7, 8, 12)
+*/
+//11.Arrow functions
+/*
+function add(...nums) {
+    let total = nums.reduce((x, y) => x + y);
+
+    console.log(total);
+}
+
+add(4, 5, 7, 8, 12)
+*/
+//12.Default Params
+/*
+function add(numArray =[]) {
+    let total = 0;
+    numArray.forEach((Element) => {
+        total += Element;
+    });
+
+    console.log(total);
+}
+
+add();
+*/
+//13.Inclues();
+/*
+let numArray = [1,2,3,4,5];
+
+console.log(numArray.includes(2));
+*/
+//14.Let & Const
+/*
+const example = {};
+example.firstName = 'Lưu';
+
+console.log(example);
+*/
+//15.Import $ Export
+/*
+import { data } from "./example";
+let updatedData = data;
+
+updatedData.push(5);
+console.log(data);
+console.log(updatedData);
+*/
+//16. padStart() & padEnd()
+/*
+let example = 'Dylan';
+
+console.log(example.padEnd(10, 'a'));
+*/
+//17.padStart() & padEnd() (Challenge)
+/*
+let example = 'YouTube.com/CodingTutorials360';
+
+console.log(example.padStart(100).length);
+console.log(example.padEnd(1));
+*/
+//18. Classes
+import {Animal } from './Animal.js';
+
+let cat = new Animal("Cat", 4);
+console.log(cat.legs)
