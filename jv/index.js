@@ -146,14 +146,14 @@ example.firstName = 'Lưu';
 console.log(example);
 */
 //15.Import $ Export
-/*
+
 import { data } from "./example";
 let updatedData = data;
 
 updatedData.push(5);
 console.log(data);
 console.log(updatedData);
-*/
+
 //16. padStart() & padEnd()
 /*
 let example = 'Dylan';
@@ -168,7 +168,14 @@ console.log(example.padStart(100).length);
 console.log(example.padEnd(1));
 */
 //18. Classes
-import {Animal } from './Animal.js';
-
+import {Animal} from './animal';
+/*
 let cat = new Animal("Cat", 4);
+
+cat.legs = 3;
+cat.MakeNoise('Meow');
+
 console.log(cat.legs)
+*/
+console.log(Animal.return10());
+//19.
