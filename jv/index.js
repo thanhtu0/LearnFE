@@ -146,8 +146,8 @@ example.firstName = 'Lưu';
 console.log(example);
 */
 //15.Import $ Export
-
-import { data } from "./example";
+/*
+import { data } from "./example.js";
 let updatedData = data;
 
 updatedData.push(5);
@@ -168,14 +168,27 @@ console.log(example.padStart(100).length);
 console.log(example.padEnd(1));
 */
 //18. Classes
-import {Animal} from './animal';
-/*
+
+// Kiểu ni là nhập theo ES6+ nha
+// import {Animal} from "./animal.js"
+
+// khi có default thì ko có ngoặc nha
+import Animal from "./animal.js"
+// Kiểu ni là nhập theo ES5 trở lui nha
+// const {Animal} = require('./animal');
+// const Animal = require('./animal');
+
+// thêm 1 lưu ý nữa là 1 file chỉ cho mặc định 1 cái thôi nha
+// còn lại cho export nhiều đc á
 let cat = new Animal("Cat", 4);
 
 cat.legs = 3;
-cat.MakeNoise('Meow');
+cat.makeNoise('Meow');
+
 
 console.log(cat.legs)
-*/
-console.log(Animal.return10());
-//19.
+console.log(Animal.return10())
+
+console.log(cat.metaData)
+
+19.
