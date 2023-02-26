@@ -132,7 +132,7 @@ function add(numArray =[]) {
 
 add();
 */
-//13.Inclues();
+//13.Includes();
 /*
 let numArray = [1,2,3,4,5];
 
@@ -170,10 +170,12 @@ console.log(example.padEnd(1));
 //18. Classes
 
 // Kiểu ni là nhập theo ES6+ nha
-// import {Animal} from "./animal.js"
+/*
+import {Animal, Cat} from "./animal.js"
 
-// khi có default thì ko có ngoặc nha
-import Animal from "./animal.js"
+//khi có default thì ko có ngoặc nha
+
+//import Animal from "./animal.js"
 // Kiểu ni là nhập theo ES5 trở lui nha
 // const {Animal} = require('./animal');
 // const Animal = require('./animal');
@@ -191,4 +193,99 @@ console.log(Animal.return10())
 
 console.log(cat.metaData)
 
-19.
+let cat2 = new Cat('Cat', 4);
+cat2.makeNoise();
+console.log(cat.metaData)
+*/
+//19.Trailing Commas
+/*
+function add(param1, )  {
+    const example = {
+        name: 'Dylan',
+    };
+
+    console.log(example)
+}
+
+add();
+*/
+//20.1 Async & Await
+//Nếu theo youtube thì đường link đã bị lỗi, chúng ta nên kiếm 1 link khác để có thể lấy
+//dữ liệu về để test 
+/*
+const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+function getTop100Campers() {
+    fetch(apiUrl)
+    .then((r) => r.json())
+    .then((json) => {
+        console.log(json[0])
+    });
+}
+getTop100Campers();
+*/
+//20.2 Nếu như Url bị lỗi thì sẽ xuất hiện dòng chữ failed
+/*
+const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+function getTop100Campers() {
+    fetch(apiUrl)
+    .then((r) => r.json())
+    .then((json) => {jv
+        console.log(json[0])
+    }).catch((error) => {
+        console.log('failed');
+    });
+}
+getTop100Campers();
+*/
+//20.3 Dùng function để tìm api không đồng bộ
+/*
+const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+async function getTop100Campers() {
+    const response = await fetch(apiUrl);
+    const json = await response.json();
+
+    console,log(json[1]);
+}
+
+getTop100Campers();
+*/
+//21.Async & Await (Challenge)
+// Dữ liệu sẽ xuất hiện sau 3000 mili  giây
+/*
+function resolvAftr3Seconds() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('resolved');
+        }, 3000);
+    });
+}
+
+//resolvAftr3Seconds().then((date)   =>  {
+//    console.log(date);
+//});
+//Khi sử dụng các chức năng không đồng bộ, sử dụng từ khóa async và get dữ liệu không đồng bộ
+async function getAsyncData() {
+    const result = await resolvAftr3Seconds();
+    console.log(result);
+}
+//Thực hiện việc nhận dữ liệu từ các địa chỉ không đồng bộ và có thời gian chờ 
+getAsyncData();
+*/
+//22. Sets
+const exampleSet = new Set([1,1,1,1,2,2,2,2]);
+console.log(exampleSet.has(2)); //Kiểm tra xem có đúng 2 phần tử trong Set không
+//console.log(exampleSet);
+console.log(exampleSet.size); //Kiểm tra số lượng phần tử
+exampleSet.add(3); //Thêm 1 phần tử
+console.log(exampleSet.size);
+exampleSet.add(3);
+console.log(exampleSet.size);
+exampleSet.delete(3); //Xóa một phần tử
+console.log(exampleSet.size);
+console.log(exampleSet.delete(3));
+exampleSet.clear(); //Xóa toàn bộ
+console.log(exampleSet.size);
+//23. Whast's Next
